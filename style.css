@@ -1,0 +1,71 @@
+.page {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between; /*tam, kad atlikti atskyrima website ir email, neveikia be flex*/
+    /*justify-content: space-around; /*atlieka atskirima ir padaro vietos aplink*/
+    /*justify-content: center; /*jei norme elemtus išrikiuoti centre*/
+   /* flex-direction: column; /*elementai headeryje issidelioja i stulpeli*/ /*jei padidinsim header, paptysim, kad space-between veikia vertikalai*/
+    /*flex-direction: column-reverse; /*apsuka elementu is apcios i virsu*/
+    /*flex-direction: row-reverse; /*apsuka elementu is desine i kaire*/
+    align-items: center; /*headeryje išcentruoja vertikaliai elementus*/
+    /*align-items:flex-start /*vertikaliai centruojasi nuo virsaus*/
+    /*align-items:flex-end /*vertikaliai centruojasi nuo apacioss*/
+    padding: 20px;
+    background-color:#eee;
+    }
+    
+.header-item {    
+    /*width:33.33333%;  /*uteikia elementams vienoda dydi*/ /*pašalinus visi elementai graziai headeryje isisicentruoja*/
+    flex-basis: 0; 
+    flex-grow: 1; /*tam, kad elementai su tucias vieta salia butu vienodo dydzio ir isvengiam procentu*/ /*jei bus daugiau ar mažiau kolonu jos pasidalins 
+    vienoda dydi*/
+} 
+
+/*----SVARBU------ Jei nera nurodyta tvarka, tokiu atveju be order numerio, viskas eis is pradziu*/
+.header-logo {
+    order: 2; /*tam, kad tel. rodytu 2 vietoj*/
+    }
+
+.header-tel {
+    order: 1;
+}
+
+.header-lang {
+    order: 3;
+}
+
+/* for sidebar and main to be in one line in content selector using display:flex*/
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    /*width:200px;*/
+      width:30%;   
+    /*flex-basis: 15%;*/
+    /*also we can write*/ /*jei nebus nurodytas dydis, užims tiek kiek numatyta pagal nutylėjimą*/
+    /* when we use two sidebars and if we want the same size of content we should reduce width to 15% */
+    /*išmatavimus taip pat galime nurodyti naudodami flex-basis*/
+    padding: 10px;
+    background-color: #333;
+}
+
+.main {
+   /* width:400px;*/
+    width:70%;   
+     /*flex-basis: 70%;*/
+    /*also we can write*/ /*jei nebus nurodytas dydis, užims tiek kiek numatyta pagal nutylėjimą*/
+     /*išmatavimus taip pat galime nurodyti naudodami flex-basis*/
+    padding: 20px;
+    background-color: #ccc;
+}
+
+.footer {
+    padding: 20px;
+    background-color:#eee;
+}
